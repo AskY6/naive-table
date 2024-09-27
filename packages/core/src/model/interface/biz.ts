@@ -1,6 +1,4 @@
-//#region Base Type
-type Position = { x: number; y: number };
-//#endregion
+import { Position } from "./common";
 
 export type Database = {
   id: string;
@@ -21,7 +19,7 @@ export type Table = {
 
 export type TableRow = {
   id: string;
-  cell: TableCell[];
+  cells: TableCell[];
 };
 
 export type TableCell = {
