@@ -39,7 +39,7 @@ const DatabaseDomain = Remesh.domain({
         const indexBiggerThanMax = orderDesc.newPosition > tables.length - 1;
         const indexLessThan0 = orderDesc.newPosition < 0;
         const tableIndex = tables.findIndex(
-          (table) => table.id === orderDesc.id,
+          (table) => table.id === orderDesc.id
         );
 
         if (indexBiggerThanMax || indexLessThan0 || tableIndex < 0) {

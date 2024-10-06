@@ -17,9 +17,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
-      vite-plugin-dts:
-        specifier: ^4.2.2
-        version: 4.2.2(@types/node@20.11.24)(rollup@4.22.5)(typescript@5.4.5)(vite@5.4.8(@types/node@20.11.24))
 
   apps/all-in-one:
     dependencies:
@@ -70,6 +67,9 @@ importers:
       vite:
         specifier: ^5.4.1
         version: 5.4.8(@types/node@20.11.24)
+      vite-plugin-dts:
+        specifier: ^4.2.2
+        version: 4.2.2(@types/node@20.11.24)(rollup@4.22.5)(typescript@5.6.2)(vite@5.4.8(@types/node@20.11.24))
 
 packages:
 
@@ -1013,19 +1013,6 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  '@vue/language-core@2.1.6(typescript@5.4.5)':
-    dependencies:
-      '@volar/language-core': 2.4.5
-      '@vue/compiler-dom': 3.5.9
-      '@vue/compiler-vue2': 2.7.16
-      '@vue/shared': 3.5.9
-      computeds: 0.0.1
-      minimatch: 9.0.5
-      muggle-string: 0.4.1
-      path-browserify: 1.0.1
-    optionalDependencies:
-      typescript: 5.4.5
-
   '@vue/language-core@2.1.6(typescript@5.6.2)':
     dependencies:
       '@volar/language-core': 2.4.5
@@ -1337,25 +1324,6 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
-
-  vite-plugin-dts@4.2.2(@types/node@20.11.24)(rollup@4.22.5)(typescript@5.4.5)(vite@5.4.8(@types/node@20.11.24)):
-    dependencies:
-      '@microsoft/api-extractor': 7.47.7(@types/node@20.11.24)
-      '@rollup/pluginutils': 5.1.2(rollup@4.22.5)
-      '@volar/typescript': 2.4.5
-      '@vue/language-core': 2.1.6(typescript@5.4.5)
-      compare-versions: 6.1.1
-      debug: 4.3.7
-      kolorist: 1.8.0
-      local-pkg: 0.5.0
-      magic-string: 0.30.11
-      typescript: 5.4.5
-    optionalDependencies:
-      vite: 5.4.8(@types/node@20.11.24)
-    transitivePeerDependencies:
-      - '@types/node'
-      - rollup
-      - supports-color
 
   vite-plugin-dts@4.2.2(@types/node@20.11.24)(rollup@4.22.5)(typescript@5.6.2)(vite@5.4.8(@types/node@20.11.24)):
     dependencies:
