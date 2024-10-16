@@ -10,8 +10,12 @@
  * * 3.2 Edit
  */
 
+import { DataLoaderPhase, createDataloader } from "./dataloader";
+
+
 export type IWorkbenchOptions = {
   parent: HTMLElement;
+  databaseId: string;
 };
 
 export type IWorkbench = {
@@ -19,8 +23,16 @@ export type IWorkbench = {
 };
 
 const createWorkbench = (options: IWorkbenchOptions): IWorkbench => {
+  const dataloder = createDataloader({ databaseId: options.databaseId });
   return {
-    startup() {},
+    startup() {
+      dataloder.start()
+      dataloder.when(DataLoaderPhase.Permission)
+        .then(hasPermission => {
+          console.log('has permission?? ', hasPermission)
+          return false
+        })
+    },
   };
 };
 

@@ -1,22 +1,21 @@
-import { initService } from "@naive/service";
 import {
   IWorkbenchEntry,
   IWorkbenchConstructionOptions,
-} from "@naive/workbench/api";
+} from "@/workbench/api";
 import { createWorkbench } from "./workbench";
 
 const createWorkbenchEntry = (
   option: IWorkbenchConstructionOptions
 ): IWorkbenchEntry => {
   // init service
-  initService();
+  // initService();
 
-  const workbench = createWorkbench({ parent: option.parent });
-  workbench.startup()
-  
-  // construct facade
+  const workbench = createWorkbench({ parent: option.parent, databaseId: option.id });
 
-  return {};
+
+  return {
+    startup: workbench.startup
+  };
 };
 
 export { createWorkbenchEntry };

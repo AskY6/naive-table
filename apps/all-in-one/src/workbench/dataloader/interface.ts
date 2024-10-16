@@ -1,5 +1,5 @@
-import { Resolve } from "@naive/core/base/async";
-import { Database, Table } from "@naive/core/model/interface";
+import { Resolve } from "@/core/base/async";
+import { Database, Table } from "@/core/model/interface";
 
 // 数据加载的各个阶段
 export enum DataLoaderPhase {

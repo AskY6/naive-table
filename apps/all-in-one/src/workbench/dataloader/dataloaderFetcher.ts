@@ -1,18 +1,18 @@
-import { Table } from "@naive/core/model/interface";
+import { Table } from "@/core/model/interface";
 import { IDatabaseMeta, IDataloaderFetcher } from "./interface";
 
 const createDataloaderFetcher = (): IDataloaderFetcher => {
   const fetcher: IDataloaderFetcher = {
     getPermissionInfo: function (): Promise<boolean> {
+      return Promise.resolve(true)
+    },
+    getDatabaseMeta: function (): Promise<IDatabaseMeta> {
       throw new Error("Function not implemented.");
     },
-    getDatabaseMeta: function (databaseId: string): Promise<IDatabaseMeta> {
+    getTable: function (): Promise<Table> {
       throw new Error("Function not implemented.");
     },
-    getTable: function (tableId: string): Promise<Table> {
-      throw new Error("Function not implemented.");
-    },
-    getTables: function (tableIds: string[]): Promise<Table[]> {
+    getTables: function (): Promise<Table[]> {
       throw new Error("Function not implemented.");
     },
   };
