@@ -1,4 +1,4 @@
-import { NoneType } from "@naive/core/base/functional";
+import { NoneType } from "@/core/base/functional";
 import { createDataloaderFetcher } from "./dataloaderFetcher";
 import { createDataloaderLifecycle } from "./dataloaderLifecycle";
 import { IDataloaderLifecycle } from "./interface";

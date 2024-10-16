@@ -1,10 +1,10 @@
-import { Database, Table } from "@naive/core/model/interface";
+import { Database, Table } from "@/core/model/interface";
+import { createDeferredPromise } from "@/core/base/async";
 import {
   DataLoaderPhase,
   IDatabaseMeta,
   IDataloaderLifecycle,
 } from "./interface";
-import { createDeferredPromise } from "@naive/core/base/async";
 
 const createDataloaderLifecycle = (): IDataloaderLifecycle => {
   let phase: DataLoaderPhase = DataLoaderPhase.Init;
@@ -36,7 +36,7 @@ const createDataloaderLifecycle = (): IDataloaderLifecycle => {
     resolvePermission: permissionDeferredPromise.resolve,
     resolveMeta: databaseMetaDeferredPromise.resolve,
     resolveCurTable: curTableDeferredPromise.resolve,
-    resolveAllTable: allTableDeferredPromise.resolve
+    resolveAllTable: allTableDeferredPromise.resolve,
   };
 
   return dataloaderLifeCycle;

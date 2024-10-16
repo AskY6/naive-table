@@ -20,7 +20,7 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@naive/*": ["./src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
